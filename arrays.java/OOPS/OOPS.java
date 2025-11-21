@@ -4,9 +4,9 @@ public class OOPS{
         pen p1 = new  pen();
         p1.setColor("Blue");
         System.out.println(p1.color);
-        // p1.setTip(p1.tip);
-        // p1.setColor("yellow");
-        // System.out.println(p1);
+        p1.setTip(p1.tip);
+        p1.setColor("yellow");
+        System.out.println(p1);
     }
 }
 
