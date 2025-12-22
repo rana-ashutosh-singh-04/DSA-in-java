@@ -62,6 +62,22 @@ public class DoubleLinkedlist{
         return temp;
     }
 
+    public void reversell(){
+        node curr = head;
+        node prev = null;
+        node next;
+
+        while (curr != null) {
+            next = curr.next;
+            curr.next = prev;
+            curr.prev = next;
+
+            prev  = curr;
+            curr = next;
+        }
+
+        head = prev;
+    }
 
     public static void main(String[] args) {
         DoubleLinkedlist dll = new DoubleLinkedlist();
@@ -74,6 +90,8 @@ public class DoubleLinkedlist{
         dll.removeFirst();
         dll.printDoubleLinkedlist();
         System.out.println(size);
+        dll.reversell();
+        dll.printDoubleLinkedlist();
 
     }
 }
